@@ -1,3 +1,14 @@
-/* 
-    General Styles used on every website (Don't Repeat Yourself)
-*/
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap");
+:root {
+  --color-primary: #6c4ab6;
+  --color-secundary: #8d72e1;
+  --color-tersiary: #8d9eff;
+  --color-fourtiary: #b9e0ff;
+
+  --color-yellow: #ffff00;
+  --box-shadow: 0 2rem 6rem var(--color-yellow);
+}
+
+body {
+  font-family: "Dancing Script", cursive;
+}

@@ -1,7 +1,54 @@
-/*
-    home.css: This website contains selectors only used in home.css
+body {
+  background-image: url("https://static.vecteezy.com/system/resources/previews/006/147/237/original/paper-cut-rocket-background-free-vector.jpg");
 
-    All pages share the styles on index.css but you should create 
-    one more css for each page that will contain the selected used 
-    on that page only (the ones not reused in other pages).
-*/
+  background-size: cover;
+
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.header-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem;
+  background: rgba(108, 74, 182, 0.435);
+  background-size: cover;
+}
+.header-logo {
+  border-radius: 50%;
+  padding: 0.5rem;
+  height: 150px;
+  width: 150px;
+  box-shadow: 0 2rem 6rem var(--color-yellow);
+}
+
+.header-btn {
+  font-size: 2rem;
+  color: #fff;
+  margin-right: 1rem;
+  border: none;
+  padding: 1rem;
+  background-color: black;
+  box-shadow: 0 2rem 6rem var(--color-yellow);
+  border-radius: 10px;
+}
+
+.header-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4rem 8rem var(--color-yellow);
+}
+.header-btn:active {
+  transform: translateY(0);
+}
+
+.navbar-box {
+  padding: 1rem;
+  background: rgba(108, 74, 182, 0.435);
+  font-size: 2rem;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
