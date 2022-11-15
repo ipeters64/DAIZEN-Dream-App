@@ -6,7 +6,6 @@ export const Navbar = () => {
     <nav className="navbar">
       <ul className="navbar-box">
         <li className="navbar-items">Home</li>
-
         <li className="navbar-items">Features</li>
         <li className="navbar-items">Contact</li>
         <li className="navbar-items">About</li>

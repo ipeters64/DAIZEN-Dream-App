@@ -1,5 +1,5 @@
 body {
-  background-image: url("https://static.vecteezy.com/system/resources/previews/006/147/237/original/paper-cut-rocket-background-free-vector.jpg");
+  background-image: url("https://thumbs.dreamstime.com/b/dream-catcher-abstract-bokeh-background-63781665.jpg");
 
   background-size: cover;
 
@@ -24,7 +24,9 @@ body {
 }
 
 .header-btn {
-  font-size: 2rem;
+  width: 100px;
+  height: 100px;
+  font-size: 1rem;
   color: #fff;
   margin-right: 1rem;
   border: none;
@@ -51,4 +53,20 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.main-content {
+  text-align: center;
+  padding: 0.4rem;
+  background: rgba(108, 74, 182, 0.435);
+  background-size: cover;
+  font-size: 1.5rem;
+}
+
+.result {
+  position: absolute;
+  margin-left: 28%;
+  width: 44%;
+  background: white;
+  min-height: 250px;
 }
