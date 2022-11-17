@@ -4,7 +4,7 @@ body {
   background-size: cover;
 
   background-repeat: no-repeat;
-  color: #fff;
+  color: rgb(245, 243, 243);
 }
 
 .header-box {
@@ -18,17 +18,18 @@ body {
 .header-logo {
   border-radius: 50%;
   padding: 0.5rem;
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   box-shadow: 0 2rem 6rem var(--color-yellow);
 }
 
 .header-btn {
-  width: 100px;
-  height: 100px;
-  font-size: 1rem;
+  width: 120px;
+  height: 70px;
+  font-size: 17px;
   color: #fff;
   margin-right: 1rem;
+  text-align: center;
   border: none;
   padding: 1rem;
   background-color: black;
@@ -53,7 +54,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .main-content {
@@ -66,8 +67,36 @@ body {
 
 .result {
   position: absolute;
+  border-radius: 50px;
+  margin-top: 25px;
   margin-left: 28%;
   width: 44%;
   background: white;
   min-height: 250px;
+  color: black;
+}
+
+.navbar-items:hover {
+  background-color: rgb(113, 158, 227);
+}
+
+.navbar-items:active {
+  background-color: #7b71db;
+  box-shadow: 0 5px rgb(77, 118, 206);
+  transform: translateY(4px);
+}
+
+.navbar-items {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  background-color: #f4f4f4;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(135, 143, 230);
 }
