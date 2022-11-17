@@ -32,7 +32,7 @@ body {
   text-align: center;
   border: none;
   padding: 1rem;
-  background-color: black;
+  background-color: rgb(36, 101, 155);
   box-shadow: 0 2rem 6rem var(--color-yellow);
   border-radius: 10px;
 }
