@@ -8,7 +8,7 @@ export const Header = () => (
       <h1 className="header-h1"> DAIZEN Dream App </h1>
       <h2 className="header-h2"> What Your Dream Means</h2>
     </div>
-    <Link to="/demo">
+    <Link to="/dream-meaning">
       <button className="header-btn">Why Do We Dream?</button>{" "}
     </Link>
   </div>
