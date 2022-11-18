@@ -66,7 +66,6 @@ body {
 }
 
 .result {
-  position: absolute;
   border-radius: 50px;
   margin-top: 25px;
   margin-left: 28%;
@@ -99,4 +98,12 @@ body {
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px rgb(135, 143, 230);
+}
+
+.footer {
+  background-color: rgba(108, 74, 182, 0.435);
+}
+
+.follow {
+  font-size: x-large;
 }
