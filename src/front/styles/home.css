@@ -1,8 +1,6 @@
 body {
-  background-image: url("https://thumbs.dreamstime.com/b/dream-catcher-abstract-bokeh-background-63781665.jpg");
-
+  background-image: url("../img/dreamcatcher.png");
   background-size: cover;
-
   background-repeat: no-repeat;
   color: rgb(245, 243, 243);
 }
@@ -70,7 +68,7 @@ body {
   margin-top: 25px;
   margin-left: 28%;
   width: 44%;
-  background: white;
+  background: lightcyan;
   min-height: 250px;
   color: black;
 }
