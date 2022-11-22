@@ -12,6 +12,7 @@ import { Navbar } from "./component/navbar";
 import { Header } from "./component/header";
 import { MainPage } from "./component/mainpage";
 import { Footer } from "./component/footer";
+import backImg from "../img/2961976950_colorful_dream_catcher_background.png";
 
 //create your first component
 const Layout = () => {
@@ -20,7 +21,14 @@ const Layout = () => {
   const basename = process.env.BASENAME || "";
 
   return (
-    <div>
+    <div
+      style={{
+        backgroundImage: `url(${backImg})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <BrowserRouter basename={basename}>
         <ScrollToTop>
           <Header />
