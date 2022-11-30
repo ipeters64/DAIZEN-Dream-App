@@ -7,14 +7,8 @@ export const Footer = () => (
     <div className="follow">
       <FontAwesomeIcon icon={faUserFriends} />
       Follow Us:
-      <ul>
-        <li>
-          <a href="https://www.linkedin.com/in/dariel-au-703555236/">
-            Dariel Au
-          </a>
-        </li>
-      </ul>
+      <a href="https://www.linkedin.com/in/dariel-au-703555236/">Dariel Au</a>
     </div>
-    © 2022 Copyright: All Rights Reserved
+    ©2022 Copyright: All Rights Reserved
   </footer>
 );
