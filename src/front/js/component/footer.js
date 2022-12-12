@@ -8,6 +8,9 @@ export const Footer = () => (
       <FontAwesomeIcon icon={faUserFriends} />
       Follow Us:
       <a href="https://www.linkedin.com/in/dariel-au-703555236/">Dariel Au</a>
+      <a href="https://www.linkedin.com/in/isaiah-peters-30597624a">
+        Isaiah Peters
+      </a>
     </div>
     ©2022 Copyright: All Rights Reserved
   </footer>
