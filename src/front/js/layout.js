@@ -4,13 +4,12 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./pages/home";
 import { DreamMeaning } from "./pages/dream-meaning";
-import { Demo } from "./pages/demo";
-import { Single } from "./pages/single";
+
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Header } from "./component/header";
-import { MainPage } from "./component/mainpage";
+
 import { Footer } from "./component/footer";
 import backImg from "../img/2961976950_colorful_dream_catcher_background.png";
 
@@ -33,15 +32,13 @@ const Layout = () => {
         <ScrollToTop>
           <Header />
           <Navbar />
-          <MainPage />
-          <Footer />
           <Routes>
-            <Route element={<Home />} path="/" />
-            <Route element={<Demo />} path="/demo" />
-            <Route element={<DreamMeaning />} path="/dream-meaning" />
-            <Route element={<Single />} path="/single/:theid" />
+            <Route exact path="/" element={<Home />}></Route>
+            <Route element={<DreamMeaning />} exact path="/dream-meaning" />
+
             <Route element={<h1>Not found!</h1>} />
           </Routes>
+          <Footer />
         </ScrollToTop>
       </BrowserRouter>
     </div>

@@ -162,7 +162,7 @@ body {
 }
 
 .navbar-items:hover {
-  box-shadow: 0 2rem 6rem var(--color-yellow);
+  box-shadow: 0 2rem 6rem var(--color-primary);
   transform: translateY(-4px);
 
   cursor: pointer;
@@ -196,10 +196,19 @@ body {
 }
 
 .follow {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .follow a {
+  background: rgba(224, 255, 255, 0.253);
   text-decoration: none;
-  margin-left: 5px;
+  margin-left: 0.5rem;
+  padding: 0.4rem;
+  color: #000000;
+}
+
+.follow a:hover {
+  color: var(--color-primary);
+
+  box-shadow: var(--box-shadow);
 }

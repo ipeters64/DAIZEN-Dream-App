@@ -1,0 +1,22 @@
+.dream-meaning {
+  text-align: center;
+  border-radius: 10px;
+  padding: 2rem;
+
+  background: rgba(224, 255, 255, 0.253);
+
+  color: black;
+}
+
+.dream-meaning h1 {
+  font-size: 3rem;
+  background: rgba(224, 255, 255, 0.793);
+  display: inline-block;
+  padding: 1rem;
+  text-transform: uppercase;
+  word-spacing: 1rem;
+}
+
+.dream-meaning p {
+  font-size: 1.7rem;
+}
