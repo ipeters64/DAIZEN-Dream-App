@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "../../img/logo.png";
+import logo from "../../img/bestlogo.jpeg";
 import { Link } from "react-router-dom";
 export const Header = () => (
   <div className="header-box">
