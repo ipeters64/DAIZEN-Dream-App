@@ -17,3 +17,18 @@ class User(db.Model):
             "email": self.email,
             # do not serialize the password, its a security breach
         }
+
+class Dream(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    description= db.Column(db.String(2000), unique=False, nullable=True)
+    meaning= db.Column(db.String(2000), unique=False, nullable=True)
+
+    def __repr__(self):
+        return f'<Dream {self.id}>'
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "description": self.description,
+            "meaning": self.meaning
+        }
