@@ -180,6 +180,7 @@ body {
 }
 
 .navbar-items {
+  color:#fff;
   display: inline-block;
   font-size: 24px;
   padding: 1.3rem;

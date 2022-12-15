@@ -16,9 +16,10 @@ export const Navbar = () => {
         <li className="navbar-items">
           Home <FontAwesomeIcon icon={faHouse} />
         </li>
+        <Link to="/features">
         <li className="navbar-items">
           Features <FontAwesomeIcon icon={faGear} />
-        </li>
+        </li></Link>
         <li className="navbar-items">
           Contact <FontAwesomeIcon icon={faPhone} />
         </li>

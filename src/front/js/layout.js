@@ -4,6 +4,7 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./pages/home";
 import { DreamMeaning } from "./pages/dream-meaning";
+import { Features } from "./pages/features";
 
 import injectContext from "./store/appContext";
 
@@ -35,7 +36,7 @@ const Layout = () => {
           <Routes>
             <Route exact path="/" element={<Home />}></Route>
             <Route element={<DreamMeaning />} exact path="/dream-meaning" />
-
+            <Route element={<Features />} exact path="/features" />
             <Route element={<h1>Not found!</h1>} />
           </Routes>
           <Footer />
