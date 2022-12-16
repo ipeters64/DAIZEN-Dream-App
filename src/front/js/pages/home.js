@@ -5,19 +5,14 @@ export const Home = () => {
     <div className="main-content">
       <h1 className="content-h1"> Dream Interpretations </h1>
       <form>
-        <label for="dreamAbout">I Dreamed About</label>
-        <input
-          placeholder="About what was your dream"
-          type="text"
-          list="about"
-          id="dreamAbout"
-        />
+        <label for="dreamAbout">I had a </label>
+        <input placeholder="input" type="text" list="about" id="dreamAbout" />
         <datalist id="about">
           <option value="null">----</option>
           <option value="dream">Dream</option>
           <option value="nightmare">Nightmare</option>
         </datalist>
-        <label for="dreamWas">In The Dream There Was A</label>
+        <label for="dreamWas">where I was </label>
         <input
           placeholder="What did your dream have"
           type="text"
@@ -25,13 +20,20 @@ export const Home = () => {
           id="dreamWas"
         />
         <datalist id="was">
-          <option value="action word">insert action</option>
-          <option value="flying">Flying</option>
-          <option value="running">Running</option>
-          <option value="swimming">Swimming</option>
+          <option value="action word">Kissing</option>
+          <option value="action word">Flying</option>
+          <option value="action word">Running</option>
+          <option value="action word">Swimming</option>
+        </datalist>
+        <label for="dreamWas">with a </label>
+        <datalist id="was">
+          <option value="animal">dog</option>
+          <option value="animal">cat</option>
+          <option value="animal">bear</option>
+          <option value="animal">bird</option>
         </datalist>
 
-        <button class="summit main-btn">See what your Dream mean</button>
+        <button class="summit main-btn">Get Result</button>
       </form>
       <div className="result">
         <h1>Result:</h1>
