@@ -68,7 +68,7 @@ const animals = [
         dreamDescription: 'A lions presence'
     }
 ]
-const newspapers = [
+const articles = [
     {
         title: 'nytimes.com',
         url: 'https://www.nytimes.com/search?query=dreams+interpretation'
