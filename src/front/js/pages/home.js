@@ -13,10 +13,9 @@ export const Home = () => {
           id="dreamAbout"
         />
         <datalist id="about">
-          <option>about your 1 </option>
-          <option>about your 2 </option>
-          <option>about your 3 </option>
-          <option>about your 4 </option>
+          <option value="null">----</option>
+          <option value="dream">Dream</option>
+          <option value="nightmare">Nightmare</option>
         </datalist>
         <label for="dreamWas">In The Dream There Was A</label>
         <input
@@ -26,10 +25,10 @@ export const Home = () => {
           id="dreamWas"
         />
         <datalist id="was">
-          <option>was your 1 </option>
-          <option>was your 2 </option>
-          <option>was your 3 </option>
-          <option>was your 4 </option>
+          <option value="action word">insert action</option>
+          <option value="flying">Flying</option>
+          <option value="running">Running</option>
+          <option value="swimming">Swimming</option>
         </datalist>
 
         <button class="summit main-btn">See what your Dream mean</button>
