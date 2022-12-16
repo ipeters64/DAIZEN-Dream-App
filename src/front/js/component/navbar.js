@@ -26,9 +26,10 @@ export const Navbar = () => {
         <li className="navbar-items">
           About <FontAwesomeIcon icon={faCircleInfo} />
         </li>
+        <Link to="/signup">
         <li className="navbar-items">
           User <FontAwesomeIcon icon={faUser} />
-        </li>
+        </li></Link>
       </ul>
     </nav>
   );

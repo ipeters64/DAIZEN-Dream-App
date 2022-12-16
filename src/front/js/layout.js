@@ -5,6 +5,8 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./pages/home";
 import { DreamMeaning } from "./pages/dream-meaning";
 import { Features } from "./pages/features";
+import { Signup } from "./pages/signup";
+
 
 import injectContext from "./store/appContext";
 
@@ -13,6 +15,8 @@ import { Header } from "./component/header";
 
 import { Footer } from "./component/footer";
 import backImg from "../img/2961976950_colorful_dream_catcher_background.png";
+import { Login } from "./pages/signin";
+import { User } from "./pages/user";
 
 //create your first component
 const Layout = () => {
@@ -37,6 +41,9 @@ const Layout = () => {
             <Route exact path="/" element={<Home />}></Route>
             <Route element={<DreamMeaning />} exact path="/dream-meaning" />
             <Route element={<Features />} exact path="/features" />
+            <Route element={<Signup />} exact path="/signup" />
+            <Route element={<Login />} exact path="/signin" />
+            <Route element={<User />} exact path="/user" />
             <Route element={<h1>Not found!</h1>} />
           </Routes>
           <Footer />

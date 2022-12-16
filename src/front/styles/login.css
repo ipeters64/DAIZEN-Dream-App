@@ -1,0 +1,11 @@
+/* styles for the login and signup pages
+*/
+.login,
+.signup {
+  height: 280px;
+}
+.btn.btn-primary {
+  color: #ffffff;
+  background-color: #8d72e1;
+  border-color: #8d72e1;
+}
