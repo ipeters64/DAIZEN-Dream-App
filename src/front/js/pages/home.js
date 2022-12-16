@@ -26,6 +26,7 @@ export const Home = () => {
           <option value="action word">Swimming</option>
         </datalist>
         <label for="dreamWas">with a </label>
+        <input placeholder="animal" type="text" id="dreamAnimal" />
         <datalist id="was">
           <option value="animal">dog</option>
           <option value="animal">cat</option>
