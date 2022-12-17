@@ -6,19 +6,13 @@ export const Home = () => {
       <h1 className="content-h1"> Dream Interpretations </h1>
       <form>
         <label for="dreamAbout">I had a </label>
-        <input placeholder="input" type="text" list="about" id="dreamAbout" />
+        <input placeholder="dream" type="text" list="about" />
         <datalist id="about">
-          <option value="null">----</option>
           <option value="dream">Dream</option>
           <option value="nightmare">Nightmare</option>
         </datalist>
         <label for="dreamWas">where I was </label>
-        <input
-          placeholder="What did your dream have"
-          type="text"
-          list="was"
-          id="dreamWas"
-        />
+        <input placeholder="What did your dream have" type="text" list="was" />
         <datalist id="was">
           <option value="action word">Kissing</option>
           <option value="action word">Flying</option>
@@ -26,12 +20,14 @@ export const Home = () => {
           <option value="action word">Swimming</option>
         </datalist>
         <label for="dreamWas">with a </label>
-        <input placeholder="animal" type="text" id="dreamAnimal" />
-        <datalist id="was">
+
+        <input placeholder="animal" type="text" list="have" />
+        <datalist id="have">
           <option value="animal">dog</option>
           <option value="animal">cat</option>
           <option value="animal">bear</option>
           <option value="animal">bird</option>
+          <option value="animal">tiger</option>
         </datalist>
 
         <button class="summit main-btn">Get Result</button>
