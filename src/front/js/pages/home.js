@@ -12,9 +12,8 @@ export const Home = () => {
           <option value="nightmare">Nightmare</option>
         </datalist>
         <label for="dreamWas">where I was </label>
-        <input placeholder="What did your dream have" type="text" list="was" />
+        <input placeholder="action" type="text" list="was" />
         <datalist id="was">
-          <option value="action word">Kissing</option>
           <option value="action word">Flying</option>
           <option value="action word">Running</option>
           <option value="action word">Swimming</option>
@@ -25,9 +24,7 @@ export const Home = () => {
         <datalist id="have">
           <option value="animal">dog</option>
           <option value="animal">cat</option>
-          <option value="animal">bear</option>
           <option value="animal">bird</option>
-          <option value="animal">tiger</option>
         </datalist>
 
         <button class="summit main-btn">Get Result</button>
