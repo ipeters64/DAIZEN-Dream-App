@@ -143,6 +143,7 @@ body {
   background: rgba(255, 255, 255, 0.732);
   outline: none !important;
   padding: 0.7rem 0.2rem;
+  cursor:pointer;
 }
 
 .main-content form label {

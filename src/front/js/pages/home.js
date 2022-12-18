@@ -8,23 +8,34 @@ export const Home = () => {
         <label for="dreamAbout">I had a </label>
         <input placeholder="dream" type="text" list="about" />
         <datalist id="about">
-          <option value="dream">Dream</option>
-          <option value="nightmare">Nightmare</option>
+          <option value="Dream" />
+          <option value="Nightmare" />
         </datalist>
         <label for="dreamWas">where I was </label>
         <input placeholder="action" type="text" list="was" />
         <datalist id="was">
-          <option value="action word">Flying</option>
-          <option value="action word">Running</option>
-          <option value="action word">Swimming</option>
+          <option value="Flying" />
+          <option value="Running" />
+          <option value="Swimming" />
+          <option value="Standing" />
         </datalist>
         <label for="dreamWas">with a </label>
 
         <input placeholder="animal" type="text" list="have" />
         <datalist id="have">
-          <option value="animal">dog</option>
-          <option value="animal">cat</option>
-          <option value="animal">bird</option>
+          <option value="Dog" />
+          <option value="Cat" />
+          <option value="Bird" />
+          <option value="Unsure" />
+        </datalist>
+        <label for="dreamwas">at</label>
+
+        <input placeholder="where" type="text" list="place" />
+        <datalist id="place">
+          <option value="My Room" />
+          <option value="Beach" />
+          <option value="Forest" />
+          <option value="Unsure" />
         </datalist>
 
         <button class="summit main-btn">Get Result</button>
