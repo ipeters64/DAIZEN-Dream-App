@@ -5,6 +5,8 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./pages/home";
 import { DreamMeaning } from "./pages/dream-meaning";
 import { Features } from "./pages/features";
+import { Contact } from "./pages/contact";
+import { About } from "./pages/about";
 import { Signup } from "./pages/signup";
 
 
@@ -41,6 +43,8 @@ const Layout = () => {
             <Route exact path="/" element={<Home />}></Route>
             <Route element={<DreamMeaning />} exact path="/dream-meaning" />
             <Route element={<Features />} exact path="/features" />
+            <Route element={<Contact />} exact path="/contact" />
+            <Route element={<About />} exact path="/about" />
             <Route element={<Signup />} exact path="/signup" />
             <Route element={<Login />} exact path="/signin" />
             <Route element={<User />} exact path="/user" />

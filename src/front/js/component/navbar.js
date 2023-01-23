@@ -13,19 +13,22 @@ export const Navbar = () => {
   return (
     <nav className="navbar">
       <ul className="navbar-box">
+        <Link to="/">
         <li className="navbar-items">
           Home <FontAwesomeIcon icon={faHouse} />
-        </li>
+        </li></Link>
         <Link to="/features">
         <li className="navbar-items">
           Features <FontAwesomeIcon icon={faGear} />
         </li></Link>
+        <Link to="/contact">
         <li className="navbar-items">
           Contact <FontAwesomeIcon icon={faPhone} />
-        </li>
+        </li></Link>
+        <Link to="/about">
         <li className="navbar-items">
           About <FontAwesomeIcon icon={faCircleInfo} />
-        </li>
+        </li></Link>
         <Link to="/signup">
         <li className="navbar-items">
           User <FontAwesomeIcon icon={faUser} />

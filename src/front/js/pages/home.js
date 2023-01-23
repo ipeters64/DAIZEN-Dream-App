@@ -26,6 +26,7 @@ export const Home = () => {
         >
           <option value=""> Choose one </option>
           <option value="dream"> Dream </option>
+          <option value="nightmare"> Nightmare </option>
         </select>
 
         <label htmlFor="dreamWas">where I was </label>
@@ -44,6 +45,12 @@ export const Home = () => {
           <option value="eating">Eating</option>
           <option value="dancing">Dancing</option>
           <option value="kissing">Kissing</option>
+          <option value="screaming">Screaming</option>
+          <option value="falling">Falling</option>
+          <option value="chased">Chased</option>
+          <option value="hiding">Hiding</option>
+          <option value="drowning">Drowning</option>
+          <option value="fighting">Fighting</option>
         </select>
 
         <label htmlFor="dreamAnimal">with a </label>
