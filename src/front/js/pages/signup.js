@@ -9,16 +9,16 @@ export const Signup = () => {
 
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSignUp = async (e) => {
     e.preventDefault();
-    const signInOk = await actions.createUser(userName, password);
-
-    if (signInOk) {
+    actions.signUp(userName, password);
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
       navigate("/user");
-    } else {
-      alert("Unable to sign in correctly");
-    }
+    }, 1000);
   };
 
   return (
@@ -26,36 +26,42 @@ export const Signup = () => {
       <div className="card w-50 signup mt-5">
         <div className="card-body">
           <h5 className="card-title">Signup</h5>
-          <div className="card-text">
-            <div className="input-group mb-3">
-              <span className="input-group-text" id="basic-addon1">
-                Username
-              </span>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="User Name"
-                onChange={(e) => setUserName(e.target.value)}
-                value={userName}
-                aria-label="Username"
-                aria-describedby="basic-addon1"
-              ></input>
+          {!isLoading ? (
+            <div className="card-text">
+              <div className="input-group mb-3">
+                <span className="input-group-text" id="basic-addon1">
+                  Email
+                </span>
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="User Name"
+                  onChange={(e) => setUserName(e.target.value)}
+                  value={userName}
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                ></input>
+              </div>
+              <div className="input-group mb-3">
+                <span className="input-group-text" id="basic-addon1">
+                  Password
+                </span>
+                <input
+                  type="password"
+                  className="form-control"
+                  placeholder="Password"
+                  onChange={(e) => setPassword(e.target.value)}
+                  value={password}
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                ></input>
+              </div>
             </div>
-            <div className="input-group mb-3">
-              <span className="input-group-text" id="basic-addon1">
-                Password
-              </span>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Password"
-                onChange={(e) => setPassword(e.target.value)}
-                value={password}
-                aria-label="Username"
-                aria-describedby="basic-addon1"
-              ></input>
+          ) : (
+            <div className="spinner-border" role="status">
+              <span className="visually-hidden">Loading...</span>
             </div>
-          </div>
+          )}
         </div>
         <a
           href="#"

@@ -1,117 +1,122 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { useParams } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const Home = () => {
+  const { store, actions } = useContext(Context);
+  const [dream, setDream] = useState("dream");
+  const [animal, setAnimal] = useState("dog");
+  const [action, setAction] = useState("flying");
+  const [place, setPlace] = useState("myRoom");
+  const [isResult, setIsResult] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
   return (
     <div className="main-content">
       <h1 className="content-h1"> Dream Interpretations </h1>
       <form>
-        <label for="dreamAbout">I had a </label>
-        <input placeholder="dream" type="text" list="about" />
-        <datalist id="about">
-          <option value="Dream" />
-          <option value="Nightmare" />
-        </datalist>
-        <label for="dreamWas">where I was </label>
-        <input placeholder="action" type="text" list="was" />
-        <datalist id="was">
-          <option value="Flying" />
-          <option value="Running" />
-          <option value="Swimming" />
-          <option value="Standing" />
-        </datalist>
-        <label for="dreamWas">with a </label>
+        <label htmlFor="dreamAbout">I had a </label>
+        <select
+          name="dream"
+          id="dreamAbout"
+          onChange={(e) => {
+            setDream(e.target.value);
+          }}
+          value={dream}
+        >
+          <option value=""> Choose one </option>
+          <option value="dream"> Dream </option>
+        </select>
 
-        <input placeholder="animal" type="text" list="have" />
-        <datalist id="have">
-          <option value="Dog" />
-          <option value="Cat" />
-          <option value="Bird" />
-          <option value="Unsure" />
-        </datalist>
-        <label for="dreamwas">at</label>
+        <label htmlFor="dreamWas">where I was </label>
+        <select
+          name="action"
+          id="dreamWas"
+          onChange={(e) => {
+            setAction(e.target.value);
+          }}
+          value={action}
+        >
+          <option value=""> Choose one </option>
+          <option value="flying">Flying</option>
+          <option value="running">Running</option>
+          <option value="swimming">Swimming</option>
+          <option value="eating">Eating</option>
+          <option value="dancing">Dancing</option>
+          <option value="kissing">Kissing</option>
+        </select>
 
-        <input placeholder="where" type="text" list="place" />
-        <datalist id="place">
-          <option value="My Room" />
-          <option value="Beach" />
-          <option value="Forest" />
-          <option value="Unsure" />
-        </datalist>
+        <label htmlFor="dreamAnimal">with a </label>
+        <select
+          name="animal"
+          id="dreamAnimal"
+          onChange={(e) => {
+            setAnimal(e.target.value);
+          }}
+          value={animal}
+        >
+          <option value=""> Choose one </option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="bird">Bird</option>
+          <option value="unsure">Unsure</option>
+        </select>
 
-        <button class="summit main-btn">Get Result</button>
+        <label htmlFor="dreamwas">at</label>
+        <select
+          placeholder="where"
+          type="text"
+          list="place"
+          onChange={(e) => {
+            setPlace(e.target.value);
+          }}
+          value={place}
+        >
+          <option value=""> Choose one </option>
+          <option value="myRoom">My Room</option>
+          <option value="beach">Beach</option>
+          <option value="forest">Forest</option>
+          <option value="unsure">Unsure</option>
+        </select>
+
+        <button
+          className="summit main-btn"
+          onClick={(e) => {
+            e.preventDefault();
+            actions.getDreamMeaning(dream, animal, action, place);
+            setIsLoading(true);
+            setTimeout(() => {
+              setIsResult(true);
+              setIsLoading(false);
+            }, 1000);
+          }}
+        >
+          {!isLoading ? (
+            "Get Result"
+          ) : (
+            <div className="spinner-border" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </div>
+          )}
+        </button>
       </form>
-      <div className="result">
-        <h1>Result:</h1>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged.
-        </p>
-      </div>
+      {isResult ? (
+        <div className="result">
+          <h1>Result:</h1>
+          <p>{store.dreamActionResult}</p>
+          <p>{store.dreamAnimalResult}</p>
+          <p>{store.dreamPlaceResult}</p>
+          <button
+            onClick={() => {
+              setIsResult(false);
+            }}
+          >
+            Clear Result
+          </button>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
-
-// export const Home = () => {
-//   class DreamForm extends React.Component {
-//     constructor(props) {
-//       super(props);
-//       this.state = { value: "null" };
-
-//       this.handleChange = this.handleChange.bind(this);
-//       this.handleSubmit = this.handleSubmit.bind(this);
-//     }
-
-//     handleChange(event) {
-//       this.setState({ value: event.target.value });
-//     }
-
-//     handleSubmit(event) {
-//       alert("Interpretation loading: " + this.state.value);
-//       event.preventDefault();
-//     }
-
-//     render() {
-//       return (
-//         <form onSubmit={this.handleSubmit}>
-//           <label>
-//             I had a
-//             <select value={this.state.value} onChange={this.handleChange}>
-//               <option value="null">----</option>
-//               <option value="dream">Dream</option>
-//               <option value="nightmare">Nightmare</option>
-//             </select>
-//             where I was
-//             <select>
-//               <option value="action word">insert action</option>
-//               <option value="flying">Flying</option>
-//               <option value="running">Running</option>
-//               <option value="swimming">Swimming</option>
-//             </select>
-//             with/from this
-//             <select>
-//               <option value="animal">insert animal</option>
-//               <option value="fly">Fly</option>
-//               <option value="rhino">Rhino</option>
-//               <option value="snake">Snake</option>
-//             </select>
-//             in
-//             <select>
-//               <option value="location">insert location</option>
-//               <option value="beach">The Beach</option>
-//               <option value="my-Room">My Room</option>
-//               <option value="forest">The Forest</option>
-//             </select>
-//             and so on!
-//           </label>
-//           <input type="submit" value="Submit" />
-//         </form>
-//       );
-//     }
-//   }
-// };
-
-// ReactDOM.render(<DreamForm />, document.getElementById("root"));
