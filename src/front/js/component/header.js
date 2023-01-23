@@ -3,7 +3,9 @@ import logo from "../../img/bestlogo.jpeg";
 import { Link } from "react-router-dom";
 export const Header = () => (
   <div className="header-box">
+    <Link to="/">
     <img className="header-logo" src={logo} />
+    </Link>
     <div className="header-divs">
       <h1 className="header-h1">DAIZEN</h1>
       <h2 className="header-h2">Dream APP</h2>
