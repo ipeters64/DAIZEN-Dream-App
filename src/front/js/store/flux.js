@@ -1,3 +1,6 @@
+
+//using getState hook for retrieving the dreams and sending it to the backend database
+//also creating the id's to be used for when the user clicks "Get result" button
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 	  store: {
